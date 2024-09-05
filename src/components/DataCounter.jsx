@@ -4,40 +4,40 @@ import React from "react";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 
-function DataCounter() {
-  const Counter = ({ end, duration, PlusSign, moneySign }) => {
-    const [count, setCount] = useState(0);
-    useEffect(() => {
-      let start = 0;
-      const increament = end / ((duration / 1000) * 60);
+const Counter = ({ end, duration, PlusSign, moneySign }) => {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    let start = 0;
+    const increament = end / ((duration / 1000) * 60);
 
-      const timer = setInterval(() => {
-        start += increament;
-        if (start > end) {
-          setCount(end);
-          clearInterval(timer);
-        } else {
-          setCount(Math.floor(start));
-        }
-      }, 16);
-      return () => clearInterval(timer);
-    }, [end, duration]);
-    return (
-      <div className="text-3xl text-gray-800">
-        {count}
-        {moneySign && "K"}
-        {PlusSign && "+"}
-      </div>
-    );
-  };
+    const timer = setInterval(() => {
+      start += increament;
+      if (start > end) {
+        setCount(end);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 20);
+    return () => clearInterval(timer);
+  }, [end, duration]);
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="text-3xl text-gray-800">
+      {count}
+      {moneySign && "K"}
+      {PlusSign && "+"}
+    </div>
+  );
+};
+function DataCounter() {
+  return (
+    <div className="flex flex-col items-center justify-evenly h-210 w-full py-2">
       <Head>
         <title>Counter Animation</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-row items-center justify-center flex-1 w-full px-20 text-center">
+      <main className="flex flex-row items-center justify-evenly flex-1 w-full px-20 text-center">
         <div className="p-6">
           <Counter
             id="Aspiring Entrepreneurs"
