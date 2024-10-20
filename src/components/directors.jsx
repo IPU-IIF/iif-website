@@ -1,10 +1,9 @@
 import React from 'react';
-import contactSvg from '@/assets/contactUs/contact.svg'; // Import the contact image
-import Summit from "@/assets/directors/SumitChoudhary.svg";
-import Nikhil from "@/assets/directors/Nikhilesh.svg"
-import NC from "@/assets/directors/NC.svg"
-import Ajay from "@/assets/directors/Ajay.svg"
-import Summant from "@/assets/directors/Sumant.svg"
+import Summit from "../assets/directors/SumitChoudhary.svg";
+import Nikhil from "../assets/directors/Nikhilesh.svg"
+import NC from "../assets/directors/NC.svg"
+import Ajay from "../assets/directors/Ajay.svg"
+import Summant from "../assets/directors/Sumant.svg"
 import Image from 'next/image';
 
 const Directors = () => {

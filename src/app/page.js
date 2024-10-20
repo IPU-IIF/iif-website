@@ -1,10 +1,11 @@
-import Benefits from "@/components/Benefits";
-import EmailSection from "@/components/contact";
-import DataCounter from "@/components/DataCounter";
-import Directors from "@/components/directors";
-import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
-import Overview from "@/components/Overview";
+import DataCounter from "../Components/DataCounter";
+import NavBar from "../components/NavBar"
+import Overview from "../components/Overview"
+import Benefits from "../components/Benefits"
+import Directors from "../components/directors";
+import EmailSection from "../components/contact"
+import Footer from "../components/Footer"
+
 
 export default function Home() {
   return (

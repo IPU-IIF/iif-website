@@ -8,7 +8,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa"; // Make sure to install react-icons package
-import iif_logo from "@/assets/logo/iif_logo.png";
+import iif_logo from "../assets/logo/iif_logo.png";
 
 const Footer = () => {
   const [email, setEmail] = useState("");

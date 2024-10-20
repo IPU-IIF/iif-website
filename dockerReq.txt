@@ -1,0 +1,5 @@
+1. docker run --name iif -e POSTGRES_PASSWORD=yourpassword -p 5432:5432 -d postgres
+
+
+2. Create .env file And copy paste .env.example
+
