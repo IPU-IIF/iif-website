@@ -93,8 +93,8 @@ const Footer = () => {
               </div>
             </nav>
           </div>
-          <div className="flex flex-col md:flex-col justify-between items-start mb-8">
-            <div>
+          <div className="flex flex-col items-end md:flex-col justify-between  mb-8">
+            <div className="mb-6">
               <Image src={mapsvg} alt="map" width={500} height={500} />
             </div>
             <div className="flex space-x-4 mt-4 md:mt-0  ">
