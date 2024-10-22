@@ -1,4 +1,9 @@
 import React from "react";
+import Image from "next/image";
+import mentorship from "../assets/Benefits/mentorship.svg";
+import designed from "../assets/Benefits/designedWorkspace.svg"
+import specialised from "../assets/Benefits/specialisedWorkshop.svg"
+import networking from "../assets/Benefits/networkingnexus.svg"
 
 const Benefits = () => {
   return (
@@ -48,25 +53,33 @@ const Benefits = () => {
         </div>
       </div>
       <div className="absolute top-[78px] left-[123px] bg-darkslategray w-[484px] h-[26px]" />
-      <img
-        className="absolute top-[215px] left-[185px] w-[146px] h-[146px] overflow-hidden"
-        alt=""
-        src="networking-06_svgrepo.com.svg"
+      <Image
+        className="absolute top-[215px] left-[185px] overflow-hidden"
+        alt="Networking"
+        src={networking}
+        width={146}
+        height={146}
       />
-      <img
-        className="absolute top-[223px] left-[833px] w-[130px] h-[130px] overflow-hidden"
-        alt=""
-        src="presentation_svgrepo.com.svg"
+      <Image
+        className="absolute top-[223px] left-[833px] overflow-hidden"
+        alt="Presentation"
+        src={designed}
+        width={130}
+        height={130}
       />
-      <img
-        className="absolute top-[220px] left-[514px] w-[136px] h-[136px] overflow-hidden"
-        alt=""
-        src="desk-computer_svgrepo.com.svg"
+      <Image
+        className="absolute top-[220px] left-[514px] overflow-hidden"
+        alt="Desk Computer"
+        src={specialised}
+        width={136}
+        height={136}
       />
-      <img
-        className="absolute top-[221px] left-[1146px] w-[122px] h-[122px] overflow-hidden"
-        alt=""
-        src="guide_svgrepo.com.svg"
+      <Image
+        className="absolute top-[221px] left-[1146px] overflow-hidden"
+        alt="Guide"
+        src={mentorship}
+        width={122}
+        height={122}
       />
     </div>
   );
