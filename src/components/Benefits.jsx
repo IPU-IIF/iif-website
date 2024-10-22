@@ -33,7 +33,7 @@ const benefitsData = [
   },
 ];
 
-const ExampleUsage = () => {
+const Benefits = () => {
   return (
     <div className="grid place-items-center py-12 gap-16">
       <div className="grid md:grid-cols-2 gap-6 place-content-center md:place-content-start">
@@ -54,4 +54,4 @@ const ExampleUsage = () => {
   );
 };
 
-export default ExampleUsage;
+export default Benefits;

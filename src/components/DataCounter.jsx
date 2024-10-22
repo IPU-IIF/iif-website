@@ -45,7 +45,7 @@ const counterData = [
   },
 ];
 
-const AchievementSection = () => {
+const Counter = () => {
   return (
     <div className='py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
       <div className='py-8 px-16 flex flex-col sm:flex-row items-center justify-between'>
@@ -78,4 +78,4 @@ const AchievementSection = () => {
   )
 }
 
-export default AchievementSection;
+export default Counter;
