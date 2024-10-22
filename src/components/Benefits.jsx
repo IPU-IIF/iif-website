@@ -1,6 +1,7 @@
 import React from "react";
+import networkingNexus from "@/assets/benefits/networkingnexus.svg"
 
-const Benefits = () => {
+function Benefits() {
   return (
     <div className="w-full relative bg-white h-[577px] overflow-hidden text-left text-29xl text-gray font-h5">
       <b className="absolute top-[49px] left-[calc(50%_-_88px)] leading-[84px]">
@@ -51,25 +52,21 @@ const Benefits = () => {
       <img
         className="absolute top-[215px] left-[185px] w-[146px] h-[146px] overflow-hidden"
         alt=""
-        src="networking-06_svgrepo.com.svg"
-      />
+        src={networkingNexus}/>
       <img
         className="absolute top-[223px] left-[833px] w-[130px] h-[130px] overflow-hidden"
         alt=""
-        src="presentation_svgrepo.com.svg"
-      />
+        src="presentation_svgrepo.com.svg" />
       <img
         className="absolute top-[220px] left-[514px] w-[136px] h-[136px] overflow-hidden"
         alt=""
-        src="desk-computer_svgrepo.com.svg"
-      />
+        src="desk-computer_svgrepo.com.svg" />
       <img
         className="absolute top-[221px] left-[1146px] w-[122px] h-[122px] overflow-hidden"
         alt=""
-        src="guide_svgrepo.com.svg"
-      />
+        src="guide_svgrepo.com.svg" />
     </div>
   );
-};
+}
 
 export default Benefits;
