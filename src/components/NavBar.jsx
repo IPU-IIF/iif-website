@@ -1,12 +1,14 @@
 import React from "react";
+import Image from "next/image";
 import iif_logo from "../assets/logo/iif_logo.png";
+
  
 const NavBar = () => {
   return (
     <div className="w-full bg-[#fffefb] h-14 border-b border-gray-300">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 lg:px-0">
         {/* Logo */}
-        <img
+        <Image
           className="w-[103px] h-[50px]"
           src={iif_logo}
           alt="IIF Logo"

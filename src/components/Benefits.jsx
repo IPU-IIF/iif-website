@@ -1,5 +1,5 @@
 import React from "react";
-import networkingNexus from "@/assets/benefits/networkingnexus.svg"
+
 
 function Benefits() {
   return (
@@ -52,7 +52,7 @@ function Benefits() {
       <img
         className="absolute top-[215px] left-[185px] w-[146px] h-[146px] overflow-hidden"
         alt=""
-        src={networkingNexus}/>
+        src=""/>
       <img
         className="absolute top-[223px] left-[833px] w-[130px] h-[130px] overflow-hidden"
         alt=""
