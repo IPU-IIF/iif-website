@@ -17,7 +17,7 @@ const Directors = () => {
   ];
 
   return (
-    <div className="grid place-items-center py-12 gap-8">
+    <div className="grid place-items-center py-12 gap-24">
       <h2 className="text-4xl font-bold text-center">Board of Directors</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12">
         {directors.map((director, index) => (

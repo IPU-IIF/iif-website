@@ -1,73 +1,81 @@
 "use client";
+import React from 'react'
+import dynamic from 'next/dynamic';
 
-import React from "react";
-import Head from "next/head";
-import { useEffect, useState } from "react";
+// Dynamically import the AnimatedNumbers component
+const AnimatedNumbers = dynamic(
+  () => import("react-animated-numbers"),
+  { ssr: false }
+);
 
-const Counter = ({ end, duration, PlusSign, moneySign }) => {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    let start = 0;
-    const increament = end / ((duration / 1000) * 60);
+// Array of counter data
+const counterData = [
+  {
+    end: 450,
+    duration: 2000,
+    PlusSign: true,
+    label: "Aspiring Entrepreneurs",
+    prefix: "",
+    postfix: "",
+  },
+  {
+    end: 25,
+    duration: 2000,
+    PlusSign: true,
+    label: "Start-ups Incubated",
+    prefix: "",
+    postfix: "",
+  },
+  {
+    end: 60,
+    duration: 2000,
+    PlusSign: true,
+    label: "Jobs Created",
+    prefix: "",
+    postfix: "",
+  },
+  {
+    end: 500,
+    duration: 2000,
+    moneySign: true,
+    PlusSign: true,
+    label: "Fund raised by Start-ups",
+    prefix: "",
+    postfix: "K", // Assuming you want a K for thousands
+  },
+];
 
-    const timer = setInterval(() => {
-      start += increament;
-      if (start > end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 20);
-    return () => clearInterval(timer);
-  }, [end, duration]);
+const AchievementSection = () => {
   return (
-    <div className="text-3xl text-gray-800">
-      {count}
-      {moneySign && "K"}
-      {PlusSign && "+"}
+    <div className='py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
+      <div className='py-8 px-16 flex flex-col sm:flex-row items-center justify-between'>
+        {counterData.map((achievement, index) => {
+          return (
+            <div key={index} className='flex flex-col items-center justify-center mx-4 my-4 sm:my-0'>
+              <h2 className='text-black text-4xl font-bold flex flex-row'>
+                {achievement.prefix}
+                <AnimatedNumbers
+                  includeComma
+                  animateToNumber={achievement.end}
+                  locale='en-US'
+                  className='text-black font-bold text-4xl'
+                  config={(_, index) => {
+                    return {
+                      mass: 1,
+                      friction: 100,
+                      tension: 140 * (index + 1),
+                    };
+                  }}
+                />
+                {achievement.postfix}+
+              </h2>
+              <p className='text-black text-center text-base '>{achievement.label}</p>
+            </div>
+          )
+        })}
+      </div>
     </div>
-  );
-};
-function DataCounter() {
-  return (
-    <div className="flex flex-col items-center justify-evenly h-210 w-full py-2">
-      <Head>
-        <title>Counter Animation</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex flex-row items-center justify-evenly flex-1 w-full px-20 text-center">
-        <div className="p-6">
-          <Counter
-            id="Aspiring Entrepreneurs"
-            end={450}
-            duration={2000}
-            PlusSign={true}
-          />
-          <div className="text-xl text-gray-500">Aspiring Entrepreneurs</div>
-        </div>
-        <div className="p-6">
-          <Counter id="St-Incubated" end={25} duration={2000} PlusSign={true} />
-          <div className="text-xl text-gray-500">Start-ups Incubated</div>
-        </div>
-        <div className="p-6">
-          <Counter id="Jbs-created" end={60} duration={2000} PlusSign={true} />
-          <div className="text-xl text-gray-500">Jobs Created</div>
-        </div>
-        <div className="p-6">
-          <Counter
-            id="fund raised"
-            end={500}
-            duration={2000}
-            moneySign={true}
-            PlusSign={true}
-          />
-          <div className="text-xl text-gray-500">Fund raised by Start-ups</div>
-        </div>
-      </main>
-    </div>
-  );
+  )
 }
 
-export default DataCounter;
+export default AchievementSection;
