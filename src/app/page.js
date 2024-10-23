@@ -7,7 +7,8 @@ import Directors from "../components/directors";
 import EmailSection from "../components/contact";
 import Footer from "../components/Footer";
 import FeaturedStartups from "../components/FeaturedStartups.jsx";
-
+//import NewsAndUpdates from "../components/NewsAndUpdates.jsx";
+import EventsGrid from "../components/EventsGrid.jsx";
 export default function Home() {
   return (
     <>
@@ -17,7 +18,9 @@ export default function Home() {
       <Overview />
       <Benefits />
       <FeaturedStartups />
+      <EventsGrid />
       <Directors />
+
       <EmailSection />
       <Footer />
     </>
