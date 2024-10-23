@@ -16,12 +16,18 @@ const Footer = () => {
             <div className="flex flex-row">
               {/* Logo */}
               <div className="flex flex-col items-center">
-                <Image className="h-[54px] w-[75px] pb-2" src={iif_logo} alt="IIF Logo" />
+                <Image
+                  className="h-[54px] w-[75px] pb-2"
+                  src={iif_logo}
+                  alt="IIF Logo"
+                />
               </div>
               <div className="leading-tight ml-2">
                 <p className="m-0 text-[12px] font-[700]">IPU IIF</p>
                 <p className="m-0 text-[12px] font-[700]">Innovation and</p>
-                <p className="m-0 text-[12px] font-[700]">Incubation Foundation</p>
+                <p className="m-0 text-[12px] font-[700]">
+                  Incubation Foundation
+                </p>
               </div>
             </div>
 
@@ -90,7 +96,7 @@ const Footer = () => {
               </div>
             </nav>
           </div>
-          
+
           <div className="flex flex-col justify-between items-start mb-8">
             <div>
               <iframe
@@ -117,7 +123,9 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-700">
-          <p className="text-center md:text-left">&copy; 2024 IPU IIF Inc. • Privacy • Terms • Sitemap</p>
+          <p className="text-center md:text-left">
+            &copy; 2024 IPU IIF Inc. • Privacy • Terms • Sitemap
+          </p>
         </div>
       </div>
     </footer>

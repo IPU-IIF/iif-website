@@ -1,25 +1,25 @@
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar.jsx";
 import HeroSection from "../components/HeroSection";
 import DataCounter from "../Components/DataCounter";
-import Overview from "../components/Overview"
-import Benefits from "../components/Benefits"
+import Overview from "../components/Overview";
+import Benefits from "../components/Benefits";
 import Directors from "../components/directors";
-import EmailSection from "../components/contact"
-import Footer from "../components/Footer"
+import EmailSection from "../components/contact";
+import Footer from "../components/Footer";
+import FeaturedStartups from "../components/FeaturedStartups.jsx";
 
 export default function Home() {
   return (
     <>
-
-      <NavBar /> 
+      <NavBar />
       <HeroSection />
       <DataCounter />
       <Overview />
       <Benefits />
-      <Directors/>
-      <EmailSection/>
+      <FeaturedStartups />
+      <Directors />
+      <EmailSection />
       <Footer />
-
     </>
   );
 }
