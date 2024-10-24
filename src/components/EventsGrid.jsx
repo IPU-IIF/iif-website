@@ -15,7 +15,7 @@ const EventsGrid = () => {
       title: "Call For Start-ups",
       className:
         "h-[300px] md:h-[400px] lg:h-[465px] w-full md:w-[500px] lg:w-[581px]",
-      wrapperClass: "w-full md:w-auto lg:absolute lg:top-2 lg:left-[10.5rem]",
+      wrapperClass: "w-full md:w-auto lg:absolute lg:top-0 lg:left-0",
       titleClass: "top-[220px] md:top-[300px] lg:top-[372px]",
     },
     {
@@ -24,7 +24,7 @@ const EventsGrid = () => {
       title: "IEEE Week",
       className:
         "h-[200px] md:h-[180px] lg:h-[223px] w-full md:w-[500px] lg:w-[581px]",
-      wrapperClass: "w-full md:w-auto lg:absolute lg:top-2 lg:right-44",
+      wrapperClass: "w-full md:w-auto lg:absolute lg:top-0 lg:left-[600px]",
       titleClass: "top-[100px] md:top-[90px] lg:top-[132px]",
     },
     {
@@ -34,7 +34,7 @@ const EventsGrid = () => {
       className:
         "h-[200px] md:h-[180px] lg:h-[223px] w-full md:w-[500px] lg:w-[581px]",
       wrapperClass:
-        "w-full md:w-auto lg:absolute lg:top-[15.65rem] lg:right-44",
+        "w-full md:w-auto lg:absolute lg:top-[243px] lg:left-[600px]",
       titleClass: "top-[100px] md:top-[90px] lg:top-[132px]",
     },
     {
@@ -43,8 +43,7 @@ const EventsGrid = () => {
       title: "MATLAB",
       className:
         "h-[200px] md:h-[250px] lg:h-[305px] w-full md:w-[320px] lg:w-[381px]",
-      wrapperClass:
-        "w-full md:w-auto lg:absolute lg:top-[30.5rem] lg:left-[10.5rem]",
+      wrapperClass: "w-full md:w-auto lg:absolute lg:top-[485px] lg:left-0",
       titleClass: "top-[100px] md:top-[160px] lg:top-[212px]",
     },
     {
@@ -54,7 +53,7 @@ const EventsGrid = () => {
       className:
         "h-[200px] md:h-[250px] lg:h-[305px] w-full md:w-[320px] lg:w-[381px]",
       wrapperClass:
-        "w-full md:w-auto lg:absolute lg:top-[30.5rem] lg:left-[35.4rem]",
+        "w-full md:w-auto lg:absolute lg:top-[485px] lg:left-[400px]",
       titleClass: "top-[100px] md:top-[160px] lg:top-[212px]",
     },
     {
@@ -64,7 +63,7 @@ const EventsGrid = () => {
       className:
         "h-[200px] md:h-[250px] lg:h-[305px] w-full md:w-[320px] lg:w-[381px]",
       wrapperClass:
-        "w-full md:w-auto lg:absolute lg:top-[30.5rem] lg:left-[60.2rem]",
+        "w-full md:w-auto lg:absolute lg:top-[485px] lg:left-[800px]",
       titleClass: "top-[100px] md:top-[160px] lg:top-[212px]",
     },
   ];
@@ -76,12 +75,12 @@ const EventsGrid = () => {
       </div>
 
       <div className="relative flex items-center justify-center content-center">
-        <div className="w-full lg:w-[1200px] lg:h-[790px] px-4 lg:px-0">
+        <div className="w-full max-w-[1200px] lg:h-[810px] px-4 lg:px-0 relative">
           <div className="flex flex-col md:flex-row md:flex-wrap md:justify-center md:gap-4 lg:block">
             {events.map((event) => (
               <div
                 key={event.id}
-                className={`relative cursor-pointer mb-4 md:mb-0 ${event.wrapperClass}`}
+                className={`relative cursor-pointer mb-4 md:mb-4 ${event.wrapperClass}`}
               >
                 <div className="relative">
                   <Image
