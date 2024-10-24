@@ -11,7 +11,7 @@ const NewsAndUpdates = () => {
         <h1 className="text-[#171A1F] text-3xl md:text-5xl font-bold leading-tight md:leading-[84px]">
           News And Updates
         </h1>
-        <div className="hidden md:block w-[355px] h-[26px] bg-[#383838] absolute right-40 top-0"></div>
+        <div className="hidden md:block w-[355px] h-[26px] bg-[#383838] absolute right-40 top-8"></div>
       </div>
 
       {/* Content Section */}
