@@ -54,15 +54,16 @@ const HeroSection = () => {
       </div>
 
       {/* WhatsApp Chat Button */}
-      <Link
-        href="https://wa.me/+917766924862"
-        passHref
-        target="_blank"
-        rel="noopener noreferrer"
+
+      <div
+        className="absolute bottom-10 right-10 bg-[#383838] text-white rounded-full p-4 shadow-lg hover:bg-[#128C7E] flex justify-center items-center cursor-pointer z-30"
+        style={{ width: "64px", height: "64px" }} // Ensures proper button size
       >
-        <div
-          className="absolute bottom-10 right-10 bg-[#383838] text-white rounded-full p-4 shadow-lg hover:bg-[#128C7E] flex justify-center items-center cursor-pointer"
-          style={{ width: "64px", height: "64px" }} // Ensures proper button size
+        <Link
+          href="https://wa.me/+917766924862"
+          passHref
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <Image
             src={chatIcon}
@@ -70,8 +71,8 @@ const HeroSection = () => {
             width={32}
             height={32}
           />
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 };
