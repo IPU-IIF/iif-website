@@ -1,50 +1,100 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
+import { HiMenuAlt4, HiOutlineX } from "react-icons/hi";
+
 import iif_logo from "../assets/logo/iif_logo.png";
 
 const NavBar = () => {
+  const [activeLink, setActiveLink] = useState("Home");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const links = ["Home", "About", "Programs", "Team", "Start ups", "Gallery", "News"];
+
   return (
-    <div className="w-full bg-[#fffefb] h-14 border-b border-gray-300">
+    <div className="w-full fixed bg-white h-14 border-b border-gray-300 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 lg:px-0">
         {/* Logo */}
         <a href="#">
-          <Image
-            className="w-[103px] h-[50px]"
-            src={iif_logo}
-            alt="IIF Logo"
-          />
+          <Image className="w-[103px] h-[50px]" src={iif_logo} alt="IIF Logo" />
         </a>
-        
-        {/* Navbar Links in a Single Div */}
-        <div className="hidden lg:flex space-x-8 ml-16">
-          <a href="#" className="flex flex-col items-center text-[#171a1f] hover:text-black cursor-pointer">
-            <div className="text-base font-bold font-['Helvetica'] leading-snug">Home</div>
-            <div className="bg-[#171a1f] h-1 w-full" />
-          </a>
-          <a href="#" className="text-[#565e6d] hover:text-black cursor-pointer">
-            <div className="text-base font-normal font-['Helvetica Light'] leading-snug">Programs</div>
-          </a>
-          <a href="#" className="text-[#565e6d] hover:text-black cursor-pointer">
-            <div className="text-base font-normal font-['Helvetica Light'] leading-snug">Team</div>
-          </a>
-          <a href="#" className="text-[#565e6d] hover:text-black cursor-pointer">
-            <div className="text-base font-normal font-['Helvetica Light'] leading-snug">Start ups</div>
-          </a>
-          <a href="#" className="text-[#565e6d] hover:text-black cursor-pointer">
-            <div className="text-base font-normal font-['Helvetica Light'] leading-snug">Gallery</div>
-          </a>
-          <a href="#" className="text-[#565e6d] hover:text-black cursor-pointer">
-            <div className="text-base font-normal font-['Helvetica Light'] leading-snug">News</div>
-          </a>
+
+        {/* Navbar Links - Hidden on mobile */}
+        <div className="hidden lg:flex items-center space-x-8 ml-16 relative">
+          {links.map((link) => (
+            <a
+              key={link}
+              href="#"
+              className={`flex flex-col items-center cursor-pointer transition-all ${
+                activeLink === link ? "text-black font-bold" : "text-[#565e6d] font-normal"
+              } hover:text-black`}
+              onMouseEnter={() => setActiveLink(link)}
+            >
+              <div className="text-base leading-snug">{link}</div>
+            </a>
+          ))}
         </div>
 
-        {/* Login and Register Buttons */}
-        <div className="flex space-x-4">
-          <a href="#" className="border border-black rounded-[5px] w-[111px] h-9 flex items-center justify-center cursor-pointer hover:bg-gray-100">
-            <div className="text-[#0b0000] text-sm font-normal font-['Helvetica'] leading-snug">Login</div>
+        {/* Hamburger Menu Icon - Visible on mobile */}
+        <div className="lg:hidden flex items-center">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="focus:outline-none">
+            {menuOpen ? <HiOutlineX size={28} /> : <HiMenuAlt4 size={28} />}
+          </button>
+        </div>
+
+        {/* Side Drawer for Mobile */}
+        <div
+          className={`lg:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-40 transform ${
+            menuOpen ? "translate-x-0" : "translate-x-full"
+          } transition-transform duration-300 ease-in-out`}
+        >
+          <div className="flex flex-col p-6 space-y-6">
+            {links.map((link) => (
+              <a
+                key={link}
+                href="#"
+                className={`text-lg cursor-pointer transition-all ${
+                  activeLink === link ? "text-black font-bold" : "text-[#565e6d] font-normal"
+                } hover:text-black`}
+                onClick={() => {
+                  setActiveLink(link);
+                  setMenuOpen(false);
+                }}
+              >
+                {link}
+              </a>
+            ))}
+
+            {/* Login and Register Buttons in Mobile Menu */}
+            <div className="flex flex-col space-y-4 mt-6">
+              <a
+                href="#"
+                className="border border-black rounded-[5px] w-full h-9 flex items-center justify-center cursor-pointer hover:bg-gray-100 hover:font-bold transition-all"
+              >
+                <div className="text-[#0b0000] text-sm leading-snug">Login</div>
+              </a>
+              <a
+                href="#"
+                className="border border-black rounded-[5px] w-full h-9 flex items-center justify-center cursor-pointer hover:bg-gray-100 hover:font-bold transition-all"
+              >
+                <div className="text-[#0c0000] text-sm leading-snug">Register</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Login and Register Buttons for Desktop */}
+        <div className="hidden lg:flex space-x-4">
+          <a
+            href="#"
+            className="border border-black rounded-[5px] w-[111px] h-9 flex items-center justify-center cursor-pointer hover:bg-gray-100 hover:font-bold transition-all"
+          >
+            <div className="text-[#0b0000] text-sm leading-snug">Login</div>
           </a>
-          <a href="#" className="border border-black rounded-[5px] w-28 h-9 flex items-center justify-center cursor-pointer hover:bg-gray-100">
-            <div className="text-[#0c0000] text-sm font-normal font-['Helvetica'] leading-snug">Register</div>
+          <a
+            href="#"
+            className="border border-black rounded-[5px] w-28 h-9 flex items-center justify-center cursor-pointer hover:bg-gray-100 hover:font-bold transition-all"
+          >
+            <div className="text-[#0c0000] text-sm leading-snug">Register</div>
           </a>
         </div>
       </div>
