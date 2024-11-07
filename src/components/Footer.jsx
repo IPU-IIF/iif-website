@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import iif_logo from "../assets/logo/iif_logo.png";
+import Directors from "./directors";
 import {
   TiSocialFacebookCircular,
   TiSocialInstagram,
@@ -48,10 +49,10 @@ const Footer = () => {
                 <h3 className="font-bold mb-2">Home</h3>
                 <ul>
                   <li>
-                    <a href="#">About</a>
+                    <a href="/maintenance">About</a>
                   </li>
                   <li>
-                    <a href="#">Directors</a>
+                    <a href="/#directors">Directors</a>
                   </li>
                 </ul>
               </div>
@@ -59,7 +60,7 @@ const Footer = () => {
                 <h3 className="font-bold mb-2">Start-ups</h3>
                 <ul>
                   <li>
-                    <a href="#">Incubated Start-ups</a>
+                    <a href="/#startups">Incubated Start-ups</a>
                   </li>
                   <li>
                     <a href="#">Collaborations</a>
@@ -81,13 +82,15 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold mb-2">Contact Us</h3>
+                <a href="/#contactus">
+                  <h3 className="font-bold mb-2">Contact Us</h3>
+                </a>
                 <ul>
                   <li>
-                    <a href="#">Gallery</a>
+                    <a href="/maintenance">Gallery</a>
                   </li>
                   <li>
-                    <a href="#">Our Team</a>
+                    <a href="/maintenance">Our Team</a>
                   </li>
                   <li>
                     <a href="#">Apply Now</a>

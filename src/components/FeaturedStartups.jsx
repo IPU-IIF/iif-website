@@ -5,7 +5,10 @@ import Image from "next/image";
 
 const FeaturedStartups = () => {
   return (
-    <div className="bg-[#383838] py-8 md:py-12 rounded-3xl w-full max-w-[1380px] mx-auto mb-4 ">
+    <div
+      className="bg-[#383838] py-8 md:py-12 rounded-3xl w-full max-w-[1380px] mx-auto mb-4 "
+      id="startups"
+    >
       <h1 className="text-3xl md:text-5xl font-bold text-white text-center mb-10 md:mb-20">
         Featured Startups
       </h1>

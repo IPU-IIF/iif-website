@@ -69,7 +69,7 @@ const EventsGrid = () => {
   ];
 
   return (
-    <div className="mb-10 lg:mb-[201px]">
+    <div className="mb-10 lg:mb-[201px]" id="events">
       <div className="text-center mb-8 mt-10 lg:mb-[47px] lg:mt-[143px] text-[#171A1F] text-3xl lg:text-[48px] font-bold leading-normal lg:leading-[84px]">
         Past Events
       </div>
