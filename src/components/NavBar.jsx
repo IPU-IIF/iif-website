@@ -4,6 +4,7 @@ import Image from "next/image";
 import { HiMenuAlt4, HiOutlineX } from "react-icons/hi";
 
 import iif_logo from "../assets/logo/iif_logo.png";
+import Link from "next/link";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("Home");
@@ -23,7 +24,7 @@ const NavBar = () => {
           {links.map((link) => (
             <a
               key={link}
-              href="#"
+              href={link === "Home" ? "#" : "maintenance"}
               className={`flex flex-col items-center cursor-pointer transition-all ${
                 activeLink === link ? "text-black font-bold" : "text-[#565e6d] font-normal"
               } hover:text-black`}
@@ -51,7 +52,7 @@ const NavBar = () => {
             {links.map((link) => (
               <a
                 key={link}
-                href="#"
+                href={link === "Home" ? "#" : "maintenance"}
                 className={`text-lg cursor-pointer transition-all ${
                   activeLink === link ? "text-black font-bold" : "text-[#565e6d] font-normal"
                 } hover:text-black`}
@@ -67,13 +68,13 @@ const NavBar = () => {
             {/* Login and Register Buttons in Mobile Menu */}
             <div className="flex flex-col space-y-4 mt-6">
               <a
-                href="#"
+                href="/maintenance"
                 className="border border-black rounded-[5px] w-full h-9 flex items-center justify-center cursor-pointer hover:bg-gray-100 hover:font-bold transition-all"
               >
                 <div className="text-[#0b0000] text-sm leading-snug">Login</div>
               </a>
               <a
-                href="#"
+                href="/maintenance"
                 className="border border-black rounded-[5px] w-full h-9 flex items-center justify-center cursor-pointer hover:bg-gray-100 hover:font-bold transition-all"
               >
                 <div className="text-[#0c0000] text-sm leading-snug">Register</div>
@@ -85,13 +86,13 @@ const NavBar = () => {
         {/* Login and Register Buttons for Desktop */}
         <div className="hidden lg:flex space-x-4">
           <a
-            href="#"
+            href="/maintenance"
             className="border border-black rounded-[5px] w-[111px] h-9 flex items-center justify-center cursor-pointer hover:bg-gray-100 hover:font-bold transition-all"
           >
             <div className="text-[#0b0000] text-sm leading-snug">Login</div>
           </a>
           <a
-            href="#"
+            href="/maintenance"
             className="border border-black rounded-[5px] w-28 h-9 flex items-center justify-center cursor-pointer hover:bg-gray-100 hover:font-bold transition-all"
           >
             <div className="text-[#0c0000] text-sm leading-snug">Register</div>

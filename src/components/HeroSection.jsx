@@ -42,7 +42,10 @@ const HeroSection = () => {
 
         {/* Action Button */}
         <button className="bg-[#F4A300] text-white text-2xl font-bold font-['Helvetica']leading-7 lg:text-lg px-10 py-3 lg:w-[511px] h-[58px] rounded-[10px] hover:bg-[#f49800] focus:outline-none focus:ring-2 focus:ring-[#F4A300] focus:ring-opacity-50 mt-32">
-          Pitch Us
+          <Link href= "#"
+           passHref
+           target="_blank"
+           rel="noopener noreferrer">Pitch Us </Link>
         </button>
 
         <div className="absolute bottom-10 flex space-x-2">

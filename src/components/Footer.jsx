@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import iif_logo from "../assets/logo/iif_logo.png";
 import {
   TiSocialFacebookCircular,
@@ -109,15 +110,15 @@ const Footer = () => {
             </div>
 
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <a href="#" aria-label="LinkedIn">
+              <Link href="https://www.linkedin.com/company/ipu-iif" aria-label="LinkedIn">
                 <TiSocialLinkedinCircular className="text-white size-10" />
-              </a>
-              <a href="#" aria-label="Instagram">
+              </Link>
+              <Link href="https://www.instagram.com/ipuiif_edc" aria-label="Instagram">
                 <TiSocialInstagram className="text-white size-10" />
-              </a>
-              <a href="#" aria-label="Facebook">
+              </Link>
+              <Link href="https://www.facebook.com/ipuiif.edc" aria-label="Facebook">
                 <TiSocialFacebookCircular className="text-white size-10" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
