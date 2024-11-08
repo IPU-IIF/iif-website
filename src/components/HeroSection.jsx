@@ -33,7 +33,7 @@ const HeroSection = () => {
       <div className="relative z-30 flex flex-col items-center justify-center h-full text-center text-white px-4">
         <h1 className="text-3xl md:text-5xl font-bold mb-4">IPU</h1>
         <p className="text-3xl lg:text-5xl font-bold mb-4">
-          INNOVATION & INCUBATION FOUNDATION
+          INNOVATION AND INCUBATION FOUNDATION
         </p>
         <p className="lg:w-[1190px] h-[24px]  text-[#f4f4f4] text-2xl font-bold font-['Helvetica'] leading-7">
           Empowering the transformation of Innovative concepts into Tangible
