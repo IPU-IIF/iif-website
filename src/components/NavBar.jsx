@@ -9,7 +9,15 @@ import Link from "next/link";
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
-  const links = ["Home", "About", "Programs", "Team", "Start ups", "Gallery", "News"];
+  const links = [
+    "Home",
+    "About",
+    "Programs",
+    "Team",
+    "Start ups",
+    "Gallery",
+    "News",
+  ];
 
   return (
     <div className="w-full fixed bg-white h-14 border-b border-gray-300 z-50">
@@ -26,7 +34,9 @@ const NavBar = () => {
               key={link}
               href={link === "Home" ? "#" : "maintenance"}
               className={`flex flex-col items-center cursor-pointer transition-all ${
-                activeLink === link ? "text-black font-bold" : "text-[#565e6d] font-normal"
+                activeLink === link
+                  ? "text-black font-bold"
+                  : "text-[#565e6d] font-normal"
               } hover:text-black`}
               onMouseEnter={() => setActiveLink(link)}
             >
@@ -37,7 +47,10 @@ const NavBar = () => {
 
         {/* Hamburger Menu Icon - Visible on mobile */}
         <div className="lg:hidden flex items-center">
-          <button onClick={() => setMenuOpen(!menuOpen)} className="focus:outline-none">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="focus:outline-none"
+          >
             {menuOpen ? <HiOutlineX size={28} /> : <HiMenuAlt4 size={28} />}
           </button>
         </div>
@@ -54,7 +67,9 @@ const NavBar = () => {
                 key={link}
                 href={link === "Home" ? "#" : "maintenance"}
                 className={`text-lg cursor-pointer transition-all ${
-                  activeLink === link ? "text-black font-bold" : "text-[#565e6d] font-normal"
+                  activeLink === link
+                    ? "text-black font-bold"
+                    : "text-[#565e6d] font-normal"
                 } hover:text-black`}
                 onClick={() => {
                   setActiveLink(link);
@@ -68,7 +83,7 @@ const NavBar = () => {
             {/* Login and Register Buttons in Mobile Menu */}
             <div className="flex flex-col space-y-4 mt-6">
               <a
-                href="/maintenance"
+                href="/login"
                 className="border border-black rounded-[5px] w-full h-9 flex items-center justify-center cursor-pointer hover:bg-gray-100 hover:font-bold transition-all"
               >
                 <div className="text-[#0b0000] text-sm leading-snug">Login</div>
@@ -77,7 +92,9 @@ const NavBar = () => {
                 href="/maintenance"
                 className="border border-black rounded-[5px] w-full h-9 flex items-center justify-center cursor-pointer hover:bg-gray-100 hover:font-bold transition-all"
               >
-                <div className="text-[#0c0000] text-sm leading-snug">Register</div>
+                <div className="text-[#0c0000] text-sm leading-snug">
+                  Register
+                </div>
               </a>
             </div>
           </div>
@@ -86,7 +103,7 @@ const NavBar = () => {
         {/* Login and Register Buttons for Desktop */}
         <div className="hidden lg:flex space-x-4">
           <a
-            href="/maintenance"
+            href="/login"
             className="border border-black rounded-[5px] w-[111px] h-9 flex items-center justify-center cursor-pointer hover:bg-gray-100 hover:font-bold transition-all"
           >
             <div className="text-[#0b0000] text-sm leading-snug">Login</div>
