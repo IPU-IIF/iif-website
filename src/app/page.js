@@ -12,7 +12,7 @@ import EventsGrid from "../components/EventsGrid.jsx";
 export default function Home() {
   return (
     <>
-      <NavBar />
+      <NavBar/>
       <HeroSection />
       <DataCounter />
       <Overview />

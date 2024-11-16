@@ -5,7 +5,7 @@ import imageright from "../assets/NewsAndUpdates/imageright.png";
 
 const NewsAndUpdates = () => {
   return (
-    <div className="flex flex-col">
+    <div id="news-and-updates" className="flex flex-col">
       {/* Header */}
       <div className="relative text-center mt-8 md:mt-36 px-4">
         <h1 className="text-[#171A1F] text-3xl md:text-5xl font-bold leading-tight md:leading-[84px]">
@@ -35,14 +35,15 @@ const NewsAndUpdates = () => {
               25 September 2024 <br />
               GGSIPU EDC
             </p>
-            <a
-              href="#"
-              className="self-start md:absolute md:top-0 md:right-0 border border-[#F79F1A] rounded-[10px] px-4 py-2 hover:bg-[#fdf4e4]"
-            >
-              <span className="text-[#F79F1A] text-sm leading-[22px]">
-                Read More
-              </span>
-            </a>
+            <div className="absolute top-32 md:top-28 md:w-40 right-12">
+              <a
+                href="/maintenance"
+                className="self-start md:absolute md:top-0 md:right-0 border border-[#F79F1A] rounded-[10px] px-4 py-2 hover:bg-[#fdf4e4]">
+                <span className="text-[#F79F1A] text-sm leading-[22px]">
+                  Read More
+                </span>
+              </a>
+            </div>
           </div>
 
           {/* Second News Item */}
@@ -57,13 +58,23 @@ const NewsAndUpdates = () => {
               13 May 2024 <br />
               GGSIPU EDC
             </p>
-            <a
-              href="#"
-              className="self-start md:absolute md:top-0 md:right-0 border border-[#F79F1A] rounded-[10px] px-4 py-2 hover:bg-[#fdf4e4]"
-            >
-              <span className="text-[#F79F1A] text-sm leading-[22px]">
-                Read More
-              </span>
+            <div className="absolute top-32 md:top-28 md:w-40 right-12">
+              <a
+                href="/maintenance"
+                className="self-start md:absolute md:top-0 md:right-0 border border-[#F79F1A] rounded-[10px] px-4 py-2 hover:bg-[#fdf4e4]"
+              >
+                <span className="text-[#F79F1A] text-sm leading-[22px]">
+                  Read More
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div className="text-center mt-8 md:mt-16">
+          <a href="/maintenance">
+            <button className="px-8 md:px-12 py-2 border border-orange-500 text-orange-500 rounded-md hover:bg-orange-500/10 transition-colors">
+              View All
+            </button>
             </a>
           </div>
         </div>

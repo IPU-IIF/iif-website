@@ -69,7 +69,7 @@ const EventsGrid = () => {
   ];
 
   return (
-    <div className="mb-10 lg:mb-[201px]">
+    <div id="programs" className=" scroll-m-24 mb-10 lg:mb-[201px]">
       <div className="text-center mb-8 mt-10 lg:mb-[47px] lg:mt-[143px] text-[#171A1F] text-3xl lg:text-[48px] font-bold leading-normal lg:leading-[84px]">
         Past Events
       </div>
@@ -102,12 +102,14 @@ const EventsGrid = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <button
-          type="button"
-          className="mt-6 bg-[#383838] text-white py-3 px-8 md:py-4 md:px-12 lg:py-[20px] lg:px-[136px] w-full max-w-[354px] h-auto rounded-[10px] hover:bg-opacity-90 transition-all duration-200 gap-[20px]"
-        >
-          View All
-        </button>
+        <a href="/maintenance">
+          <button
+            type="button"
+            className="mt-6 bg-[#383838] text-white py-3 px-8 md:py-4 md:px-12 lg:py-[20px] lg:px-[136px] w-full max-w-[354px] h-auto rounded-[10px] hover:bg-opacity-90 transition-all duration-200 gap-[20px]"
+          >
+            View All
+          </button>
+        </a>
       </div>
     </div>
   );
