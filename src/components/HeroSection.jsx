@@ -7,7 +7,7 @@ import chatIcon from "../assets/heropage/Phone Message.svg";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full h-[600px]">
+    <div id="home" className="scroll-smooth relative w-full h-[600px]">
       <Image
         src={backgroundImage}
         alt="Hero Background"

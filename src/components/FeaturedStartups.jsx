@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const FeaturedStartups = () => {
   return (
-    <div className="bg-[#383838] py-8 md:py-12 rounded-3xl w-full max-w-[1380px] mx-auto mb-4 ">
+    <div id="featured-startups" className="bg-[#383838] scroll-m-28 py-8 md:py-12 rounded-3xl w-full max-w-[1380px] mx-auto mb-4 ">
       <h1 className="text-3xl md:text-5xl font-bold text-white text-center mb-10 md:mb-20">
         Featured Startups
       </h1>
@@ -58,9 +58,13 @@ const FeaturedStartups = () => {
       </div>
 
       <div className="text-center mt-8 md:mt-16">
-        <button className="px-8 md:px-12 py-2 border border-orange-500 text-white rounded-md hover:bg-orange-500/10 transition-colors">
-          View All
-        </button>
+        <a
+          href="/maintenance"
+        >
+          <button className="px-8 md:px-12 py-2 border border-orange-500 text-white rounded-md hover:bg-orange-500/10 transition-colors">
+            View All
+          </button>
+        </a>
       </div>
     </div>
   );

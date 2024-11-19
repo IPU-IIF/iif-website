@@ -10,13 +10,13 @@ const NavBar = () => {
   const [activeLink, setActiveLink] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
   const links = [
-    "Home",
-    "About",
-    "Programs",
-    "Team",
-    "Start ups",
-    "Gallery",
-    "News",
+    { name: "Home", link: "#home" },
+    { name: "About", link: "#about" },
+    { name: "Programs", link: "#programs" },
+    { name: "Team" },
+    { name: "Start ups", link: "#featured-startups" },
+    { name: "Gallery" },
+    { name: "News", link: "#news-and-updates" },
   ];
 
   return (
@@ -28,21 +28,23 @@ const NavBar = () => {
         </a>
 
         {/* Navbar Links - Hidden on mobile */}
-        <div className="hidden lg:flex items-center space-x-8 ml-16 relative">
-          {links.map((link) => (
-            <a
-              key={link}
-              href={link === "Home" ? "#" : "maintenance"}
-              className={`flex flex-col items-center cursor-pointer transition-all ${
-                activeLink === link
-                  ? "text-black font-bold"
-                  : "text-[#565e6d] font-normal"
-              } hover:text-black`}
-              onMouseEnter={() => setActiveLink(link)}
-            >
-              <div className="text-base leading-snug">{link}</div>
-            </a>
-          ))}
+        <div className="hidden lg:flex scroll-smooth items-center space-x-8 ml-16 relative">
+          {links.map(({ name, link }) => {
+            return (
+              <a
+                key={link}
+                href={link || "/maintenance"}
+                className={`flex flex-col items-center cursor-pointer transition-all ${
+                  activeLink === link
+                    ? "text-black font-bold"
+                    : "text-[#565e6d] font-normal"
+                } hover:text-black`}
+                onMouseEnter={() => setActiveLink(link)}
+              >
+                <div className="text-base leading-snug">{name}</div>
+              </a>
+            );
+          })}
         </div>
 
         {/* Hamburger Menu Icon - Visible on mobile */}
@@ -62,10 +64,10 @@ const NavBar = () => {
           } transition-transform duration-300 ease-in-out`}
         >
           <div className="flex flex-col p-6 space-y-6">
-            {links.map((link) => (
+            {links.map(({ name, link }) => (
               <a
                 key={link}
-                href={link === "Home" ? "#" : "maintenance"}
+                href={link}
                 className={`text-lg cursor-pointer transition-all ${
                   activeLink === link
                     ? "text-black font-bold"
@@ -76,7 +78,7 @@ const NavBar = () => {
                   setMenuOpen(false);
                 }}
               >
-                {link}
+                {name}
               </a>
             ))}
 
